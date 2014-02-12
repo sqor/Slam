@@ -1,0 +1,1 @@
+git log --shortstat --author "Jason" --since "${2} days ago" --until "${1} days ago"  | grep "files changed"  | awk '{files+=$1; inserted+=$4; deleted+=$6} END {print "files changed", files, "lines inserted:", inserted, "lines deleted:", deleted}'

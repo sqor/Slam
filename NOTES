@@ -1,0 +1,65 @@
+#### Common Patterns:
+
+
+marksAsSelected and unselect others
+
+clickHandlers
+mouseHandlers
+
+
+stylesOnMouseOver
+
+
+
+SQOR_carrousel_card_selected should look good by default
+but we should be able to overwrite these with options
+
+
+=====================
+
+Investigate Limitations of Ininite Scroll
+
+- window.scrollTo(x,y) will let us scroll the user to a specific
+  part of our document
+  --- BUT if the user is scrolling on their own.. it wont' work
+
+- jqueryObj.scrollTop() gives us the amount the user has scrolled:
+   $("body").scrollTop()
+  - this is relative to the total height of the DOM object
+
+
+Benchmarking 
+-- moving elements each.
+-- moving many elements all at once
+
+
+
+
+[ ]  Low Level JS
+[ ] sweet.js
+    - macros
+
+[ ] Transpilation
+
+[ ] symbolic execution ---> tries to break your stuff ( divide by zero)
+
+
+ 
+
+
+
+ // JSComplexity
+
+https://npmjs.org/package/jscomplexity
+
+
+
+npm install -g jscomplexity
+
+// try sudo
+// jscomplexity@0.0.15 /usr/local/lib/node_modules/jscomplexity
+
+
+Youtube Talk:
+
+https://www.youtube.com/watch?v=ACYZFkvq0Sk

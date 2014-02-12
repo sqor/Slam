@@ -1,0 +1,2 @@
+sudo npm install -g jshint
+sudo npm install -g plato

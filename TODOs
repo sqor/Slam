@@ -1,0 +1,244 @@
+Monday 2/10/2014
+    [ ] Demo with widget (iframe) 
+    [ ] Collections should take a local object to represent data (ghetto stubs)
+    [x] HTML class needs cache buster with ?randomString 
+        - all the time in dev, or every time we compile it should happen..
+        - caches in prod, but ot in dev
+
+[ ] style widget
+[ ] Sqor.Data.currentData  for debugging... 
+Friday 
+ [ ] paintJS
+ [ ] mouseover of card - handler - 10 - 15 minutes
+ [ ] if sqor athlete add little logo
+ [ ] team 
+ [x] namespace css: add SQOR_ to classes
+ [ ] mv .sh scripts to scripts/ dir
+ [ ] research routing
+ [ ] research grunt replacement
+
+
+Thurs 2/6/2014
+ [x] hook up roster widget into sqor web
+ [ ] mouse over  on roster
+ [ ] write differ
+ [ ] styling roster
+Wed 2/5/2014
+[x] look up jsdocs  - 20 minutes
+[x] wire up carrousel widget into roster
+[ ] update old delegate methods with subclass
+[ ] rename delegateBase to Base
+
+Tues 2/4/2014
+[x] proof of concept -- add roster widget to sqor_web  - 3 hrs
+[x] create delegator inheritance class - 15 minutes
+[x] start carrousel widget - 20 minutes
+[x] update some comments with awesome diagrams and usage example
+ [x] - simpleGrid
+ [x] - simpleTable
+ [x] - dynamicTable
+ [x] - footer
+ [x] - displayCard
+[ ] set team for roster dynamically - 30 minutes
+[ ] fix old delgate methods - 30 minutes
+[ ] destroy method (especially obvious for infinite scroll - 30 mins
+[ ] start adding unit tests
+
+
+Monday 2/3/2014
+[x] create unit testing library 
+
+Saturday  2/1/2014
+[ ] Create logger class - 10 minutes
+[ ] Hit kirks dev logging - 20 minutes
+[ ] create Debugger class - 30 minutes
+    -- can set debugger to debug only certain keys ['keys'
+    -- to debug everything...
+
+
+
+Friday 1/31/2014
+[x] break up into multiple files - 30 minutes
+[x] add  html tempaltes caching  - 30 minutes
+[x] setup linter  - 1hr   - jsthint?
+[x] use strict - 10 minutes
+[x] setup example where a module is loaded by going to a route  path - 30 min
+[ ] setup watcher for build script  - 20 minutes
+
+
+
+Thursday 1/30/2014
+
+[x] watch jsprime talk - 1hr
+[x] research methods to combine js - 20 minutes
+
+[ ] modify jquery.HTML to be safe.. but if pass flag.. then it is .text ! - 10 mins
+
+
+
+[ ] abstract jquery away - 1hr (we dont wanna depeond on it)
+
+[ ] replace $.html with $.text   - 20 minutes 
+
+[x] test JSPrime  - 20 minutes --- broken.... doesn't handle any real projects
+
+
+[ ] research benchmarking (ember) 10 minutes
+[ ] research static security analysis - 70 minutes
+
+
+[ ] setup compile to have comments as part of function ---> compiler
+[ ] dev shoudl be setup to not be compressed / minimified
+
+
+[ ] setup google closure compiler - 30 minutes
+
+[ ] code painter - setup
+
+[ ] setup selenium
+
+[ ] watch jswiz  - 30 minute 
+
+Wed 1/29/2014
+[/][70] simple router - 1hr
+[x] watch video on JS static analysis 50  minutes
+[x] researched various static analysis tools, setup Plato on Jenkins with Noah
+[ ] test out bluebird - 1hr
+
+[ ] add better comments  + diagrams + usage 30 minutes
+[ ] add destroy methods 30 minutes
+
+
+[ ] Documentation Wiki / Overview - 25 miutes
+
+
+[ ] break up into multiple files
+[ ] setup vim spell checker  10 minutes
+[ ] write auto generate folders script - 30 minutes 
+
+[ ] write sample app with backbone  40 minutes
+[ ] setup with ngnix inside our main site - 35 minutes
+[ ] Checkoff todos
+[ ] look into sass / etc 20 minutes
+[ ] dataChanged vs transFormationHappened methods for SimpleCollection
+
+[ ] setup jsodoc / closure docs - 30 minutes
+
+[ ] git precommit hook - 30 minutes
+    -  git prepush hook? 
+    - linter
+    - validator
+
+[ ] setup web hooks
+
+
+[ ] on push attempt... run tests to measure code --> publish to web  - 30 min
+[ ] identifier / length - 10 minutes
+[ ] comment density
+[ ] expression depth
+[ ] duplicate / similar fragment
+
+[ ] double equal operator
+[ ] boolean traps
+[ ] double negatives 
+[ ] nested ternary
+
+[ ] strict mode check - 10 minutes
+    [ ] double data property
+    [ ] typo
+    [ ] variable not used
+
+[ ] code complexity, physicolmatic complexity - 10 min
+[ ] http://jscomplexity.org
+
+[ ] code coverage analysis - 10 min 
+    - what parts are being executed ... tests check important part of code
+    - instrumentation: node-cover github
+
+[ ] branch coverage , statement coverage    - 15 minutes
+    - istanbul github
+
+
+[ ] jqueryMobile .. slow?
+
+[ ] v8 tools
+    - classes, adding methods after
+
+
+[ ] tracking scability
+
+
+[ ] coding styles - string quotes
+    - double quotes, transformation
+
+[ ] style formatting
+
+    - formats code for you...
+    
+
+[ ] code review ..... should not have to do dumb checks - 30 minutes
+    - use tools
+    - setup prehooks
+
+[ ] Syntax query if ( x = 0)  : WARN  - 10 minutes
+[ ] copy paste mistake ?  - 10 minutes
+
+[ ] vim  / search replace
+
+[ ] semantic diff
+
+[ ] symbolic execution:w
+
+
+
+Mon 1/27/2014
+[ ] grid controller
+[ ] example toggle widget
+[ ] break up into multipl files 
+---------------
+[ ] TODO: this keyword
+[ ] add destroy methods
+
+
+Thu 1/23/2014:
+[x] load all types of data feeds
+[x] function to figure out which type
+[ ] When all models have loaded all, then change footer
+[ ] write base widget that all "feedEntry" widgets inherit from
+[ ] load appropriate widget type 
+[ ] instead of storing raw json, store models?
+
+Wed 1/22/2014:
+[x] Hook up to real data
+[x] Fix bug with loader not loading more if already 
+
+Friday  1 / 17 /2014
+[/] 1hr of erlang: try out james stuff from email
+[x] add delay to model and don't load if not yet loaded last
+[x] add bottom spinner to load more 
+[ ] keep actual array of  fake models and not just numbers
+[ ] add other type of cards accordign to model data (randomized)
+
+[ ] rename AthleteListViewController to FeedListViewController
+----
+[ ] memory monitoring
+[ ] performance
+[ ] logging / logger
+[ ] locale / language?
+[ ] implement Messenger class
+[x] add simpleCard view
+[ ] Investigate Linters
+[ ] test google closure linter
+[ ] Auto documenting our classes
+[ ] Google Closure compiler or Require
+[ ] look up socket.io
+[ ] hook up socket.io
+[ ] look up chrome optimizations
+[ ] tool to analyze javascript (lines of code total, per fxn, Usage)
+
+
+[ ] naming convention tools to help write vim / sublime plugin
+[ ] auto create modules / widgets with python 
+
+[ ] if we structure Usage examples correctly we can even run it automatically/
+    programatically =-)
