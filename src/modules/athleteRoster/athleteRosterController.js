@@ -89,7 +89,7 @@
                 , "hiddenClass": (model.number % 10  === 0)? "": "SQOR_hidden"
                 // TODO(Jason): make this an actual url
                 //  Shold probably be an external call from a library
-                //, clickHandler: self._generateClickHandler(model)
+                , clickHandler: self._generateClickHandler(model)
                 , mouseoverHandler: self._generateMouseoverHandler()
                 , mouseoutHandler: self._generateMouseoutHandler()
             };
@@ -101,8 +101,6 @@
 
         _generateMouseoverHandler: function(){
             return function(widget, ee){
-                console.log("bleh");
-                //debugger;
                 widget.getDomElement().find(".SQOR_athleteCard").addClass(
                         "SQOR_athleteCard_selected"
                         );
@@ -115,8 +113,6 @@
                         ".SQOR_athleteCard").removeClass(
                             "SQOR_athleteCard_selected"
                             );
-
-                console.log("bleh2");
             };
         },
 
