@@ -1,4 +1,4 @@
-// ExampleGridController.js
+// AthleteRosterControler.js
 (function(Sqor){
     // Dependencies
     var HTML = Sqor.Services.HTML;
@@ -50,6 +50,7 @@
          */
         _addSortingWidget: function(){
             var self = this;
+            //TODO(Jason): Not good, harcoded XXX
             var sortingWidget = new Carrousel({
                 carts: [
                         {"key": "abc", "value": "ABC"}
@@ -88,9 +89,9 @@
                 , "hiddenClass": (model.number % 10  === 0)? "": "SQOR_hidden"
                 // TODO(Jason): make this an actual url
                 //  Shold probably be an external call from a library
-                , clickHandler: self._generateClickHandler(model)
-                //, mouseoverHandler: self._generateMouseoverHandler()
-                //, mouseoutHandler: self._generateMouseoutHandler()
+                //, clickHandler: self._generateClickHandler(model)
+                , mouseoverHandler: self._generateMouseoverHandler()
+                , mouseoutHandler: self._generateMouseoutHandler()
             };
 
             var athleteCard = new AthleteCard(options);
@@ -98,19 +99,24 @@
             return athleteCard.getDomElement();
         },
 
-        _generateMouseoutHandler: function(){
+        _generateMouseoverHandler: function(){
             return function(widget, ee){
-                widget.getDomElement().css({
-                    "background": "black"
-                });
+                console.log("bleh");
+                //debugger;
+                widget.getDomElement().find(".SQOR_athleteCard").addClass(
+                        "SQOR_athleteCard_selected"
+                        );
             };
         },
 
-        _generateMouseoverHandler: function(){
+        _generateMouseoutHandler: function(){
             return function(widget, ee){
-                widget.getDomElement().css({
-                    "background": "white"
-                });
+                widget.getDomElement().find(
+                        ".SQOR_athleteCard").removeClass(
+                            "SQOR_athleteCard_selected"
+                            );
+
+                console.log("bleh2");
             };
         },
 
