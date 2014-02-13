@@ -51,6 +51,7 @@
         _addSortingWidget: function(){
             var self = this;
             //TODO(Jason): Not good, harcoded XXX
+            /*
             var sortingWidget = new Carrousel({
                 carts: [
                         {"key": "abc", "value": "ABC"}
@@ -63,7 +64,39 @@
             self._sortingWidgets.addDelegate(self);
             self._el.find(".sortingHolder").append(
                 self._sortingWidgets.getDomElement()
-            );
+            ); */
+
+            var sorterEl = $("<div class='SQOR_sorter'>  </div>");
+            sorterEl.append("<div class='SQOR_sort_jersey'></div>");
+            sorterEl.append("<div class='SQOR_sort_name'></div>");
+            var nameSorterEl = sorterEl.find('.SQOR_sort_name');
+            var arrow =$("<div class='SQOR_sort_name_arrow'></div>").appendTo(
+                    nameSorterEl);
+
+            var sortUpName = true;
+            nameSorterEl.click(function(){
+                if (sortUpName) {
+                    arrow.addClass("SQOR_sort_name_arrow_up");
+                    arrow.removeClass("SQOR_sort_name_arrow_down");
+                }else {
+                    arrow.addClass("SQOR_sort_name_arrow_down");
+                    arrow.removeClass("SQOR_sort_name_arrow_up");
+
+                }
+
+                self._toggleNameSort(sortUpName);
+                sortUpName = !sortUpName;
+            });
+            var sortUpJersey = true;
+            var sortJersey = sorterEl.find(".SQOR_sort_jersey");
+            sortJersey.click(function(){
+                self._toggleJerseySort(sortUpJersey);
+                sortUpJersey= !sortUpJersey;
+            });
+
+            arrow.addClass("SQOR_sort_name_arrow_down");
+            self._el.find(".sortingHolder").append(sorterEl);
+
         },
 
         /**********************************************************************
@@ -124,6 +157,27 @@
                 window.location = "/athlete/" + model.id +"/" +
                  encodeURIComponent(model.first_name);
             };
+        },
+
+
+        _toggleJerseySort: function(value){
+            var self = this;
+            if (value) {
+                self._models.sortBy("number", true, true);
+            }
+            else {
+                self._models.sortBy("number", false, true);
+            }
+        },
+
+        _toggleNameSort: function(value){
+            var self = this;
+            if (value) {
+                self._models.sortBy("last_name", true);
+            }
+            else {
+                self._models.sortBy("last_name", false);
+            }
         },
 
         mouseoverCard: function(carrousel, sortObject, cardEl, ee){
